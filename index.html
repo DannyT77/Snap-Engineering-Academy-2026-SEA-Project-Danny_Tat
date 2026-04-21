@@ -1,31 +1,40 @@
 <!doctype html>
 <html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
 
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
+<head>
+  <title>Manhwa Reader | Home</title>
+  <meta name="description" content="My Personal Manhwa Collection" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="header-inner">
+      <h1 class="title">MANHWA CATELOG<span></span></h1>
+      <p class="subtitle">My Personal Collection</p>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
-    </div>
-  </body>
+  </header>
+
+  <div class="filters">
+    <button onclick="filterByGenre('All')">All</button>
+    <button id="rating-btn" onclick="sortByRating()">⭐ Rating</button>
+    <button onclick="filterByGenre('Action')">Action</button>
+    <button onclick="filterByGenre('Fantasy')">Fantasy</button>
+    <button onclick="filterByGenre('Romance')">Romance</button>
+    <button onclick="filterByGenre('Sports')">Sports</button>
+
+  </div>
+
+  <div id="card-container"></div>
+
+  <div class="footer">
+    <p>© My Personal Collection Danny Tat</p>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
 </html>
