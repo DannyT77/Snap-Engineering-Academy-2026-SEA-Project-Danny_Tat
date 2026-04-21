@@ -42,7 +42,7 @@ const titles = [
     image: "https://cdn.asurascans.com/asura-images/covers/childhood-friend-of-the-zenith.6c0f26.webp",
     author: ["Ubilam", "Min Yong-ki"],
     genre: ["Action", "Fantasy", "Martial Arts", "Romance"],
-    rating: 9,
+    rating: 8.9,
     status: "Ongoing",
     chapters: 103,
     readLink: "https://comix.to/title/0kxld-childhood-friend-of-the-zenith",
@@ -53,9 +53,9 @@ const titles = [
     image: "https://www.magicemperor.xyz/wp-content/uploads/2022/02/Magic-Emperor-Manga.jpg",
     author: ["Ye Xiao", "Wuer Manhua"],
     genre: ["Action", "Fantasy", "Adventure", "Drama"],
-    rating: 8,
+    rating: 9.1,
     status: "Ongoing",
-    chapters: 771,
+    chapters: 845,
     readLink: "https://comix.to/title/3j50-magic-emperor",
     summary: "Zhuo Yifan, the most feared Demonic Emperor in the world, is betrayed and killed by his own disciple. His soul reincarnates into the body of a lowly servant named Zhuo Fan, stripped of all his power. Now a mere butler for the declining Luo Family, he uses his centuries of battle wisdom and cunning to crush enemies from the shadows — and claw his way back to the top."
   },
@@ -64,9 +64,9 @@ const titles = [
     image: "https://preview.redd.it/eternally-regressing-knight-is-this-good-whats-this-about-v0-6l1bbnkwohrd1.png?auto=webp&s=65fa6b340be516ae6d3f5f019e20f9e4f5ef3ee2",
     author: ["Soul Pung", "Lee Hyunmin", "Leean"],
     genre: ["Action", "Fantasy", "Adventure"],
-    rating: 10,
+    rating: 9.6,
     status: "Ongoing",
-    chapters: 130,
+    chapters: 106,
     readLink: "https://comix.to/title/0kx0d-eternally-regressing-knight",
     summary: "Encrid dreamed of becoming a knight despite everyone telling him he had no talent. He trained relentlessly — and still died with a sword through his neck. But instead of staying dead, he wakes up and relives the same day over and over. Each loop he grows stronger, learning from every failure. Unlike most regression stories, there are no cheat powers here — just pure grind, grit, and a man who refuses to quit."
   },
@@ -168,7 +168,139 @@ const titles = [
     chapters: 402,
     readLink: "https://comix.to/title/1zv9d-haikyu",
     summary: "Shoyo Hinata is a short kid who fell in love with volleyball after watching a legendary small player dominate on TV. Despite his height being a massive disadvantage, Hinata joins his high school team and ends up partnering with his former rival Kageyama, a genius setter with no teamwork skills. Together, the two form a terrifyingly fast attack combo as they chase their dream of reaching the top of high school volleyball."
-  }
+  },
+  {
+    title: "Bad Born Blood",
+    image: "https://i.redd.it/86fkghenvnhe1.jpeg",
+    author: ["Baeksu Noble", "Pumpkin Bird", "D-Park"],
+    genre: ["Action", "Adventure", "Drama", "Fantasy", "Sci-Fi"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 82,
+    readLink: "https://comix.to/title/3nlg-bad-born-blood",
+    summary: "In a future where humanity has spread across the stars and technology has replaced human flesh, the slums are no different from any other era — brutal and unforgiving. Luka grew up with nothing, but when he takes the Imperial Guard selection exams at fifteen, his aptitude score changes everything. Now he's being thrown into a world of soldiers, politics, and power he was never supposed to touch."
+  },
+  {
+    title: "Blink Master of the Magic Academy",
+    image: "https://cdn.asurascans.com/asura-images/covers/magic-academys-genius-blinker.bebbd0.webp",
+    author: ["Eunmilhi", "Seoyu", "SEOU"],
+    genre: ["Action", "Adventure", "Fantasy", "Drama"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 94,
+    readLink: "https://comix.to/title/eklr-blink-master-of-the-magic-academy",
+    summary: "In the virtual world of Aether World, Baek Yuseol is considered a joke. While everyone else wields powerful magic, his only ability is Blink — a short range teleport so weak most players delete it immediately. But when he's given the impossible task of reaching the game's true ending, Yuseol decides that if everyone is sleeping on Blink, maybe they just haven't seen it used right."
+  },
+  {
+    title: "The Count's Secret Maid",
+    image: "https://preview.redd.it/this-was-such-a-good-read-counts-secret-maid-v0-plocg9cr8gvf1.jpeg?auto=webp&s=643879bc0cea145ab5944939ff50bee9837af36a",
+    author: ["Baekjua", "Midnight Studio"],
+    genre: ["Drama", "Fantasy", "Romance"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 85,
+    readLink: "https://comix.to/title/2rlj2-the-counts-secret-maid",
+    summary: "Paula has never known a single kind word about her appearance — but ironically, her looks are the only reason she's still alive. Sold by her father to work in a nobleman's estate, she discovers the young Count Belunita locked away in a hidden annex, kept out of sight from the world. Forced into the role of his secret maid, Paula must navigate a master who is equal parts terrifying and tragic."
+  },
+  {
+    title: "Revenge of the Iron-Blooded Sword Hound",
+    image: "https://cdn.asurascans.com/asura-images/covers/revenge-of-the-iron-blooded-sword-hound.41b6fb.webp",
+    author: ["Seol Arang", "Legobalbasseo", "REDICE Studio"],
+    genre: ["Action", "Adventure", "Drama", "Fantasy", "Romance"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 159,
+    readLink: "https://comix.to/title/8gvd-revenge-of-the-iron-blooded-sword-hound",
+    summary: "The Baskerville family raises its children like hunting dogs — loyal, deadly, and disposable. Vikir served faithfully his entire life despite being the shunned illegitimate son, only for his own father to put him down like the hound he was raised to be. But death didn't stick. Reborn with every memory intact, Vikir has one goal — dismantle the family that made him, piece by piece."
+  },
+  {
+    title: "Memoir of the God of War",
+    image: "https://preview.redd.it/memoir-of-the-god-of-war-worth-it-v0-cfybffiivlud1.jpeg?auto=webp&s=fd480a6f6f5a8407a8aba594a25ac0a86961f6e4",
+    author: ["Ugak", "AtKenny"],
+    genre: ["Action", "Adventure", "Drama", "Fantasy", "Historical"],
+    rating: 8,
+    status: "Ongoing",
+    chapters: 250,
+    readLink: "https://comix.to/title/39162-memoir-of-the-god-of-war",
+    summary: "Dan Sa Yu is a warrior from Goryeo whose loyalty to his closest friend drives him to take on the entire Central District. Battle after battle, no one can stop him. As his legend grows under the banner of the Cheonpo Armed Forces, the full story of how an ordinary man became the God of War slowly comes to light."
+  },
+  {
+    title: "I Want To Be Fooled",
+    image: "https://i.pinimg.com/736x/72/50/2b/72502b4c9d8b91f0d3377463118892a5.jpg",
+    author: ["Cakenyam"],
+    genre: ["Drama", "Romance"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 44,
+    readLink: "http://comix.to/title/mn2vz-i-want-to-be-fooled",
+    summary: "Sujeong has spent her whole life writing love stories for other people while quietly swearing off the real thing. She is perfectly happy alone — until Seunghyeon shows up and refuses to leave. He is charming in a way that feels almost calculated, and Sujeong, who knows every romance trope in the book, can't figure out if he's the real thing or the plot twist she should have seen coming."
+  },
+  {
+    title: "The Demon King Overrun by Heroes",
+    image: "https://cdn.asurascans.com/asura-images/covers/the-demon-king-overrun-by-heroes.6abc35.webp",
+    author: ["Yoon Seon-woong"],
+    genre: ["Action", "Drama", "Fantasy"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 26,
+    readLink: "https://comix.to/title/l9vj2-the-demon-king-overrun-by-heroes",
+    summary: "Berge did everything right. He followed the Demon King's Playbook, built his tower, and played his role perfectly — and the Heroes still waltzed in and killed him like he was a side quest. Reborn with the full memory of his humiliation, Berge scraps the Playbook entirely and decides to rewrite the rules from scratch. Being a proper Demon King clearly wasn't working, so he'll try something else."
+  },
+  {
+    title: "I Became The Villain The Hero Is Obsessed With",
+    image: "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/i_became_the_villain_the_hero_is_obsessed_with.png",
+    author: ["함덕이"],
+    genre: ["Action", "Adventure", "Drama", "Fantasy", "Romance"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 50,
+    readLink: "https://comix.to/title/e05zm-i-became-the-villain-the-hero-is-obsessed-with",
+    summary: "Da-in woke up inside the body of Egoistic, the villain of his favorite manhwa, with full knowledge of how the story ends. His plan is simple — play the villain role well enough to push Stardust, the hero he adores, toward her destiny. What he did not plan for was Stardust completely abandoning the script and becoming dangerously, inconveniently obsessed with him instead."
+  },
+  {
+    title: "Surviving the Game as a Barbarian",
+    image: "https://6ed7f732781d5145ac367958b98f24ef.cdn.bubble.io/f1734373179528x649005677919061400/126_o.jpg?fit=crop&q=75",
+    author: ["HAN Taesu", "JUNG Yoonkang", "Team the Jick"],
+    genre: ["Action", "Adventure", "Drama", "Fantasy"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 151,
+    readLink: "https://comix.to/title/39x0n-surviving-the-game-as-a-barbarian",
+    summary: "Hansu Lee spent nine years grinding through Dungeon and Stone, the RPG no one has ever beaten. The moment he finally reaches the final boss door, the game decides he's done playing as a user — and drops him into the body of Bjorn Yandel, a real barbarian living inside the game world. No menu, no respawn, no logout. Just survival."
+  },
+  {
+    title: "The Villain's Survival Route",
+    image: "https://cdn.anisearch.com/images/manga/cover/92/92587_600.webp",
+    author: ["Jee Gab Song", "Daon Creative"],
+    genre: ["Action", "Adventure", "Comedy", "Drama", "Fantasy"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 52,
+    readLink: "https://comix.to/title/n7ee-the-villains-survival-route",
+    summary: "Kim Woojin was a game developer who spent years building the villain Deculein von Grahan-Yukline — a mid-boss with a 99.9% death rate. Then he woke up as him. With complete knowledge of how the story plays out and a character sheet basically designed to lose, Woojin has to find every possible crack in the narrative to make himself too useful for the plot to kill off."
+  },
+  {
+    title: "Raising Villains the Right Way",
+    image: "https://cdn.asurascans.com/asura-images/covers/raising-villains-the-right-way.a524e2.webp",
+    author: ["LICO", "Bomhan Bangul", "Jogen"],
+    genre: ["Action", "Comedy", "Drama", "Fantasy"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 31,
+    readLink: "https://comix.to/title/nk9re-raising-villains-the-right-way",
+    summary: "A burned-out office worker gets reincarnated into a noble inside a game world, only to find out he's scripted to be murdered by the future villains surrounding him. His solution — raise them himself before they go bad. He mentors them, supports them, and turns every one of them into a decent, well-adjusted person. Somehow this makes him the most feared man in the entire kingdom."
+  },
+  {
+    title: "Lookism",
+    image: "https://api-about.webtoon.com/files/download?fileNo=112",
+    author: ["Park Tae Joon"],
+    genre: ["Action", "Comedy", "Crime", "Drama"],
+    rating: 9,
+    status: "Ongoing",
+    chapters: 603,
+    readLink: "https://comix.to/title/emrmx-lookism",
+    summary: "Park Hyung-Seok wakes up one morning in a body that is everything his real one is not — tall, strong, and handsome enough to stop a room. In his original body he was bullied and invisible. In this one, doors open automatically. As he lives a double life navigating both bodies, Hyung-Seok starts to learn exactly how differently the world treats people based on how they look."
+  },
 ];
 
 
