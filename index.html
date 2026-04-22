@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Manhwa Reader | Home</title>
+  <title>Manhwa Catalog | Home</title>
   <meta name="description" content="My Personal Manhwa Collection" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&display=swap"
@@ -13,24 +13,41 @@
 
   <header class="main-header">
     <div class="header-inner">
-      <h1 class="title">MANHWA CATALOG<span></span></h1>
+      <h1 class="title">MANHWA <span>CATALOG</span></h1>
       <p class="subtitle">My Personal Collection</p>
     </div>
   </header>
 
   <div class="filters">
     <button onclick="filterByGenre('All')">All</button>
-    <button id="rating-btn" onclick="sortByRating()">⭐ Rating</button>
+    <button id="rating-btn" onclick="sortByRating()">⭐ Rating: High → Low</button>
     <button onclick="filterByGenre('Action')">Action</button>
     <button onclick="filterByGenre('Fantasy')">Fantasy</button>
     <button onclick="filterByGenre('Romance')">Romance</button>
-
   </div>
 
   <div id="card-container"></div>
 
+  <div id="modal" class="modal-overlay modal-hidden">
+    <div class="modal-box">
+      <button id="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-left">
+        <img id="modal-img" src="" alt="" />
+      </div>
+      <div class="modal-right">
+        <h2 id="modal-title"></h2>
+        <p id="modal-genre"></p>
+        <p id="modal-author"></p>
+        <p id="modal-chapters"></p>
+        <p id="modal-status"></p>
+        <p id="modal-summary"></p>
+        <a id="modal-link" href="" target="_blank">Read Now →</a>
+      </div>
+    </div>
+  </div>
+
   <div class="footer">
-    <p>© My Personal Collection Danny Tat</p>
+    <p>© My Personal Collection — Danny Tat</p>
   </div>
 
   <script src="scripts.js"></script>

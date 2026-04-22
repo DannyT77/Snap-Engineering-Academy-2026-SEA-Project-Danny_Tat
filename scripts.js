@@ -23,7 +23,6 @@
  *
  */
 
-
 // This is an array of objects (Manwha/Manga Information)
 const titles = [
   {
@@ -303,32 +302,24 @@ const titles = [
   },
 ];
 
-
-// ============================================
-// STATE — tracks current filter and sort
-// ============================================
-
 const container = document.getElementById('card-container');
 let currentGenre = 'All';
 let ratingAsc = false;
 
 function getFilteredAndSorted() {
-  let result = [...titles]; // copy array so original is never modified
+  let result = [...titles];
 
   if (currentGenre !== 'All') {
     result = result.filter(manwha => manwha.genre.includes(currentGenre));
   }
 
-  // sort by rating (toggles high-low / low-high)
   result.sort((a, b) => ratingAsc ? a.rating - b.rating : b.rating - a.rating);
-
   return result;
 }
 
 function filterByGenre(genre) {
   currentGenre = genre;
 
-  // update active button styling
   document.querySelectorAll('.filters button').forEach(btn => {
     btn.classList.remove('active');
     if (btn.textContent.trim() === genre) {
@@ -340,18 +331,13 @@ function filterByGenre(genre) {
 }
 
 function sortByRating() {
-  ratingAsc = !ratingAsc; // toggle between high→low and low→high
+  ratingAsc = !ratingAsc;
 
-  // update button label to show current sort direction
   const ratingBtn = document.getElementById('rating-btn');
+  ratingBtn.textContent = ratingAsc ? '⭐ Rating: Low → High' : '⭐ Rating: High → Low';
 
   showCards();
 }
-
-
-// ============================================
-// RENDER CARDS
-// ============================================
 
 function showCards() {
   container.innerHTML = '';
@@ -362,89 +348,52 @@ function showCards() {
     const genreTags = manwha.genre.map(g => `<span class="genre-tag">${g}</span>`).join('');
     const statusClass = manwha.status === 'Completed' ? 'completed' : '';
 
-    container.innerHTML += `
-      <div class="card">
-        <img src="${manwha.image}" alt="${manwha.title}" />
-        <div class="card-content">
-          <h2>${manwha.title}</h2>
-          <div class="card-genres">${genreTags}</div>
-          <div class="card-meta">
-            <span class="card-rating">⭐ ${manwha.rating}/10</span>
-            <span class="card-status ${statusClass}">${manwha.status}</span>
-          </div>
-          <a class="read-link" href="${manwha.readLink}" target="_blank">Read Now →</a>
-        </div>
+    const card = document.createElement('div');
+
+    card.className = 'card';
+
+    card.innerHTML = `
+    <img src="${manwha.image}" alt="${manwha.title}" />
+    <div class="card-content">
+      <h2>${manwha.title}</h2>
+      <div class="card-genres">${genreTags}</div>
+      <div class="card-meta">
+        <span class="card-rating">⭐ ${manwha.rating}/10</span>
+        <span class="card-status ${statusClass}">${manwha.status}</span>
       </div>
-    `;
+    </div>
+`;
+
+    card.addEventListener('click', () => {
+      document.getElementById('modal-title').textContent = manwha.title;
+      document.getElementById('modal-img').src = manwha.image;
+      document.getElementById('modal-author').innerHTML = `<span class="modal-label">Author:</span> ${manwha.author.join(', ')}`;
+      document.getElementById('modal-chapters').innerHTML = `<span class="modal-label">Chapters:</span> ${manwha.chapters}`;
+      document.getElementById('modal-summary').textContent = manwha.summary;
+      document.getElementById('modal-link').href = manwha.readLink;
+      document.getElementById('modal-genre').innerHTML = `<span class="modal-label">Genre:</span> ` + manwha.genre
+        .map(g => `<span class="genre-tag">${g}</span>`)
+        .join('');
+
+      const statusClass = manwha.status === 'Completed' ? 'status-tag completed' : 'status-tag ongoing';
+      document.getElementById('modal-status').innerHTML = `<span class="${statusClass}">${manwha.status}</span>`;
+
+      document.getElementById('modal').classList.remove('modal-hidden');
+    });
+
+    container.appendChild(card);
   });
+
 }
 
-
-// ============================================
-// INIT — run when page loads
-// ============================================
-
-document.addEventListener("DOMContentLoaded", showCards);
-
-/*
-// Your final submission should have much more data than this, and
-// you should use more than just an array of strings to store it all.
-
-// This function adds cards the page to display the data in the array
-function showCards() {
-  const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = "";
-  const templateCard = document.querySelector(".card");
-
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
-
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
-
-    const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+function closeModal() {
+  document.getElementById('modal').classList.add('modal-hidden');
+}
+document.getElementById('modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal')) {
+    closeModal();
   }
-}
+});
 
-function editCardContent(card, newTitle, newImageURL) {
-  card.style.display = "block";
-
-  const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
-
-  const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
-
-  // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
-}
-
-// This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 
-function quoteAlert() {
-  console.log("Button Clicked!");
-  alert(
-    "I guess I can kiss heaven goodbye, because it got to be a sin to look this good!",
-  );
-}
-
-function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
-}
-
-*/
