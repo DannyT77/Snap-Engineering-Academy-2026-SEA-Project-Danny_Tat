@@ -33,7 +33,7 @@ const titles = [
     rating: 9,
     status: "Completed",
     chapters: 200,
-    readLink: "https://comix.to/title/0kx0d-eternally-regressing-knight",
+    readLink: "https://comix.to/title/emqg8-solo-leveling",
     summary: "Sung Jin-Woo starts as an E-rank Hunter — the weakest of the weak — barely surviving low-level dungeons. Everything changes when he discovers a hidden, deadly dungeon and nearly dies inside it. Instead of dying, he awakens a mysterious power: a private quest system only he can see that lets him level up by completing quests and hunting monsters. He goes from the world's weakest hunter to an S-rank, the strongest there is."
   },
   {
