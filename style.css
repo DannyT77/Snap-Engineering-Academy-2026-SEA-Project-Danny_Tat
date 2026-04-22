@@ -56,7 +56,6 @@ body {
   margin-top: 6px;
 }
 
-/* FILTERS */
 .filters {
   display: flex;
   justify-content: center;
@@ -94,7 +93,6 @@ button.active {
   color: white;
 }
 
-/* CARD GRID */
 #card-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -104,7 +102,6 @@ button.active {
   margin: 0 auto;
 }
 
-/* CARD */
 .card {
   background: var(--card-bg);
   border-radius: 10px;
@@ -205,7 +202,6 @@ button.active {
   color: #4caf50;
 }
 
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 30px;
@@ -215,7 +211,6 @@ button.active {
   margin-top: 40px;
 }
 
-/* MODAL */
 .modal-overlay {
   position: fixed;
   top: 0;
