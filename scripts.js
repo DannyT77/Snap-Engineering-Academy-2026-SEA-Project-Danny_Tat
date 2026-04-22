@@ -23,7 +23,7 @@
  *
  */
 
-// This is an array of objects (Manwha/Manga Information)
+// This is an array of objects (Manwha/Manga data)
 const titles = [
   {
     title: "Solo Leveling",
@@ -302,6 +302,7 @@ const titles = [
   },
 ];
 
+// Grabbing the card container and setting up state variables to track the current genre filter and sort direction
 const container = document.getElementById('card-container');
 let currentGenre = 'All';
 let ratingAsc = false;
@@ -317,6 +318,7 @@ function getFilteredAndSorted() {
   return result;
 }
 
+// Filters the catalog by genre when a filter button is clicked and highlights the active button
 function filterByGenre(genre) {
   currentGenre = genre;
 
@@ -330,6 +332,7 @@ function filterByGenre(genre) {
   showCards();
 }
 
+// Toggles the rating sort between high to low and low to high and updates the button label
 function sortByRating() {
   ratingAsc = !ratingAsc;
 
@@ -339,11 +342,13 @@ function sortByRating() {
   showCards();
 }
 
+// Creates and displays each manhwa card on the page using the filtered and sorted data
 function showCards() {
   container.innerHTML = '';
 
   const filtered = getFilteredAndSorted();
 
+  // Filtering and going through each manhwa and setting up cards
   filtered.forEach((manwha) => {
     const genreTags = manwha.genre.map(g => `<span class="genre-tag">${g}</span>`).join('');
     const statusClass = manwha.status === 'Completed' ? 'completed' : '';
@@ -363,7 +368,7 @@ function showCards() {
       </div>
     </div>
 `;
-
+    // Data included in the popup
     card.addEventListener('click', () => {
       document.getElementById('modal-title').textContent = manwha.title;
       document.getElementById('modal-img').src = manwha.image;
@@ -385,7 +390,7 @@ function showCards() {
   });
 
 }
-
+// Closing modal when clicking on x or outside
 function closeModal() {
   document.getElementById('modal').classList.add('modal-hidden');
 }
